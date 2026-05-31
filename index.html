@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebUtility — Private, Client-Side Productivity Tools</title>
+    <style>
+        :root {
+            --bg-base: #0f172a;
+            --bg-surface: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border: #334155;
+            --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .badge-live {
+            background-color: #0284c7;
+            color: white;
+        }
+
+        .badge-utility {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: var(--border);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.15s, color 0.15s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent);
+            color: var(--bg-base);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>WebUtility</h1>
+            <p>A suite of private, offline-first utilities processing data entirely inside your browser. No trackers, no databases, no server-side exposure.</p>
+        </header>
+
+        <div class="grid">
+            <!-- PRODUCT 1: SWIFTCOMPRESS -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">SwiftCompress</span>
+                    <span class="badge badge-live">Image Tool</span>
+                </div>
+                <p class="card-desc">Compress, optimize, and pack images directly in your browser. Complete bulk file execution with local JSZip archiving.</p>
+                <a href="https://fkawsar68.github.io/swiftcompress/" class="btn" target="_blank">Open Application</a>
+            </div>
+
+            <!-- PRODUCT 5: PDF LOCAL -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">PDF Local</span>
+                    <span class="badge badge-live">PDF Tool</span>
+                </div>
+                <p class="card-desc">Merge and rotate PDF documents client-side. Zero upload times, zero privacy exposure, with offline processing capabilities.</p>
+                <a href="https://fkawsar68.github.io/pdf-local/" class="btn" target="_blank">Open Application</a>
+            </div>
+
+            <!-- PRODUCT 4: ZENJOURNAL -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">ZenJournal</span>
+                    <span class="badge badge-live">productivity</span>
+                </div>
+                <p class="card-desc">Distraction-free Markdown editor with a local task planner. Persists your notes safely to browser-level IndexedDB.</p>
+                <a href="https://fkawsar68.github.io/zenjournal/" class="btn" target="_blank">Open Application</a>
+            </div>
+
+            <!-- PRODUCT 2: CALCULATORS -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">SaaS ROI Calculator</span>
+                    <span class="badge badge-utility">Fintech</span>
+                </div>
+                <p class="card-desc">Determine your platform returns instantly using a dual-slider simulation pane built for conversions.</p>
+                <a href="https://fkawsar68.github.io/roi-calculator/" class="btn" target="_blank">Open Tool</a>
+            </div>
+
+            <!-- PRODUCT 2: MORTGAGE ESTIMATOR -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Mortgage Estimator</span>
+                    <span class="badge badge-utility">Fintech</span>
+                </div>
+                <p class="card-desc">Calculate mortgage amortization with quick 15/30-year toggles and downpayment threshold tracking.</p>
+                <a href="https://fkawsar68.github.io/mortgage-estimator/" class="btn" target="_blank">Open Tool</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 WebUtility Suite. All tools execute 100% locally to protect your data privacy.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
